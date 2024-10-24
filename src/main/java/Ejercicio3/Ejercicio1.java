@@ -1,21 +1,15 @@
 package Ejercicio3;
 
-import java.util.List;
-
 public class Ejercicio1 {
     public static void main(String[] args) {
         final var listaUsuarios = ExcelReader.getUsuariosList();
-
-        System.out.printf("Usuarios con Peso mayor a 50, nombre comienza en R y apellido termina en O: %s",
-                getFiltroPesoNombreApellido(listaUsuarios, 50, "R", "O"));
-    }
-
-    private static List<Usuario> getFiltroPesoNombreApellido(List<Usuario> listaTotal, int peso, String nombre, String apellido) {
-        return listaTotal
+        final var listaFinalUsuarios = listaUsuarios
                 .stream()
-                .filter(x -> x.getPeso() > peso)
-                .filter(x -> x.getNombre().toUpperCase().startsWith(nombre))
-                .filter(x -> x.getApellido().toUpperCase().endsWith(apellido))
+                .filter(x -> x.getPeso() > 50)
+                .filter(x -> x.getNombre().toUpperCase().startsWith("R"))
+                .filter(x -> x.getApellido().toUpperCase().endsWith("O"))
                 .toList();
+        System.out.printf("Usuarios con Peso mayor a 50, nombre comienza en R y apellido termina en O: %s",
+                listaFinalUsuarios);
     }
 }
