@@ -109,4 +109,10 @@ public class Pokemon {
     public void setHp(int hp) {
         this.hp = hp;
     }
+
+    public int getHpAumentado() {
+        return hp + 500;
+    }
+
+
 }
