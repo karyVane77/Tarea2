@@ -110,9 +110,70 @@ public class Pokemon {
         this.hp = hp;
     }
 
-    public int getHpAumentado() {
-        return hp + 500;
+    public Pokemon getHpAumentado() {
+        Pokemon nuevo = new Pokemon();
+        nuevo.setId(id);
+        nuevo.setNombre(nombre);
+        nuevo.setNivel(nivel);
+        nuevo.setAtaque(ataque);
+        nuevo.setHp(hp + 500);
+        nuevo.setAtaqueEspecial(ataqueEspecial);
+        nuevo.setDefensa(defensa);
+        nuevo.setDefensaEspecial(defensaEspecial);
+        nuevo.setVelocidad(velocidad);
+        nuevo.setEntrenador(entrenador);
+        nuevo.setMacho(macho);
+        nuevo.setUbicacion(ubicacion);
+        nuevo.setTipo(tipo);
+        return nuevo;
     }
 
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    public void setAtaque(double ataque) {
+        this.ataque = ataque;
+    }
+
+    public void setDefensa(double defensa) {
+        this.defensa = defensa;
+    }
+
+    public void setAtaqueEspecial(double ataqueEspecial) {
+        this.ataqueEspecial = ataqueEspecial;
+    }
+
+    public void setDefensaEspecial(double defensaEspecial) {
+        this.defensaEspecial = defensaEspecial;
+    }
+
+    public void setVelocidad(double velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    public void setMacho(boolean macho) {
+        this.macho = macho;
+    }
+
+    public void setEntrenador(String entrenador) {
+        this.entrenador = entrenador;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 }
